@@ -12,3 +12,23 @@ I need this code, just don't know where, perhaps should make some middleware, do
 
 Go code!
 */
+const dotenv = require('dotenv').config('.env')
+const express = require('express')
+const helmet = require('helmet')
+const actionRouter = require('./routes/actionRouter')
+const projectRouter = require('./routes/projectRouter')
+const server = express()
+server.use(express.json())
+server.use(helmet())
+
+server.get('/', (req, res) => {
+  res.send(`
+    <h1>Welcome To Projects and Actions API</h1>
+    `)
+})
+server.use('/api/actions', actionRouter)
+server.use('/api/projects', projectRouter)
+
+server.listen(process.env.PORT || 4003, () => {
+  console.log('Api Ready')
+})

@@ -26,13 +26,25 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+  express is a web application framework on top of node
+
+  express adds extra functionality such as routing and middleware support.
+
 - [ ] Describe Middleware?
+
+  middleware is described as array of functions that get executed in the order they are introduced. they are used to add functionality on while handling the request
 
 - [ ] Describe a Resource?
 
+  a resource is a document that gets returned to the client from the server.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+  Api returns a status code to let the client know the request was successful
+
 - [ ] How can we partition our application into sub-applications?
+
+  you can partition an app into sub-applications by using express routers. it makes the app easier to maintain.
 
 ## Project Setup
 
